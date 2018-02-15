@@ -100,9 +100,9 @@
     <section id="about">
       <div class="site_wrapper about_background">
         <div class="content_wrapper about_text">
-          <div class="section_title margin_add">
+          <div class="section_title margin_add about_padding">
             <h2 class="uppercase section_title_text">about</h2>
-            <span class="kasen"></span>
+            <span class="kasen_about"></span>
           </div>
           <div class="padding_sp">
             <p class="padding_add">Explore endless vacation options and discover great deals, hidden gems in Shibuya Udagawa area! Like bars, Izakayas, Night clubs, street foods</p>
@@ -234,12 +234,16 @@
     });
   });
   
-  $(function(){
-    $("").on("click", function() {
-        $(this).nextUntil("dt","dd").slideToggle(); 
-        $(this).toggleClass("active"); 
-    });
-  });
+  
+$(function(){
+    var w = $(window).width();
+    var x = 749;
+    if (w <= x) {
+        $('.top_text').fadeIn(3000,function (){
+  	      $(".top_text").fadeOut(2000);
+        });
+    }
+});
   
   $(function(){
     $('a[href^=#]').click(function(){ 

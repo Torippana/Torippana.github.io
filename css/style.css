@@ -17,7 +17,7 @@ html {
 
 @media (max-width: 750px) {
   html {
-    font-size: 55.5%; } }
+    font-size: 48%; } }
 body {
   font-size: 1.4rem;
   font-family: "Josefin Sans", sans-serif;
@@ -29,12 +29,8 @@ body {
 a {
   color: #fff;
   text-decoration: none; }
-  a:visited {
-    color: #bb3711; }
   a:hover {
     color: #bb3711; }
-  a:active {
-    color: #ec582c; }
 
 .site_wrapper {
   margin: 0 auto;
@@ -138,9 +134,11 @@ header {
       bottom: 9px;
       left: 71px; }
     @media (max-width: 750px) {
+      #header_area .sitetitle .title1 {
+        top: 9px; }
       #header_area .sitetitle .title2 {
-        bottom: 15px;
-        left: 60px; } }
+        bottom: 9px;
+        left: 56px; } }
   #header_area .navbar_area {
     width: 70%; }
     #header_area .navbar_area .nav_inner {
@@ -160,6 +158,11 @@ header {
       display: none; }
 
 /*#header_area*/
+@media (max-width: 750px) {
+  #header_area {
+    height: 60px; }
+    #header_area .sitetitle {
+      height: 60px; } }
 /* Header(PC幅)
 ------------------------------------------------------------*/
 @media (min-width: 751px) {
@@ -179,24 +182,29 @@ header {
     display: block;
     text-align: right; }
     .navbar_sp .slide_menu_icon i {
-      font-size: 50px;
-      font-size: 5rem; } }
+      font-size: 43px;
+      font-size: 4.3rem; } }
 /* ハンバーガメニュー(SP幅)
 ------------------------------------------------------------*/
 .sp_menu_toggle {
   display: none; }
 
-.sp_slide_menu .sp_menu_toggle {
-  padding-top: 10px; }
+.sp_slide_menu {
+  background: #000; }
   .sp_slide_menu .sp_menu_toggle li {
     display: block;
     text-align: center;
-    padding: 5px 0;
+    padding: 10px 0;
     margin: 3px 0;
-    border: 1px solid #000; }
+    border-bottom: 1px solid #fff; }
     .sp_slide_menu .sp_menu_toggle li a {
-      font-size: 16px;
-      font-size: 1.6rem; }
+      font-size: 19px;
+      font-size: 1.9rem; }
+  .sp_slide_menu .sp_menu_toggle li:first-child {
+    margin-top: 0;
+    border-top: 1px solid #fff; }
+  .sp_slide_menu .sp_menu_toggle li:last-child {
+    margin-bottom: 0; }
 
 /* footer(共通)
 ------------------------------------------------------------*/
@@ -238,9 +246,18 @@ footer {
     font-size: 35px;
     font-size: 3.5rem;
     color: #fff; }
+  .section_title .kasen_about {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: inline-box;
+    width: 40px;
+    border-bottom: 3px solid #fff; }
   .section_title .kasen {
     position: absolute;
-    top: 40px;
+    top: 50px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -277,6 +294,9 @@ main #blog {
     font-size: 40px;
     font-size: 4rem; }
 
+@media (max-width: 750px) {
+  #main_image div .main_image_inner .top_text {
+    display: none; } }
 /* アバウト(ABOUT)
 ------------------------------------------------------------*/
 .about_background {
@@ -287,7 +307,7 @@ main #blog {
   /*画面からの相対位置（背景固定）*/
   background-size: cover;
   /*背景サイズ調整*/
-  height: 500px;
+  height: 700px;
   /*div高さ*/
   position: relative;
   /*相対位置に配置するように調整*/ }
@@ -305,6 +325,8 @@ main #blog {
     /*要素内余白*/
     text-align: center;
     width: 100%; }
+    .about_background .about_text .about_padding {
+      padding-top: 70px; }
 
 .about_background::before {
   /* 透過した黒を重ねる */
@@ -325,6 +347,21 @@ main #blog {
 /* アバウト(ABOUT)SP幅
 ------------------------------------------------------------*/
 @media (max-width: 750px) {
+  .about_background {
+    height: 450px; }
+    .about_background .about_text {
+      position: absolute;
+      /*親要素からの相対位置*/
+      top: 46%;
+      /*親要素中の縦位置*/
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      padding: 0;
+      /*要素内余白*/ }
+      .about_background .about_text .about_padding {
+        padding-top: 70px; }
+
   .padding_sp {
     padding: 0 20px; } }
 /* コンテンツ(CONTENTS)
@@ -371,8 +408,8 @@ main #blog {
     /*要素内余白*/
     text-align: center;
     width: 100%;
-    font-size: 30px;
-    font-size: 3rem; }
+    font-size: 27px;
+    font-size: 2.7rem; }
 
 /*-----(PC幅）---------*/
 @media (min-width: 751px) {
@@ -435,6 +472,12 @@ main #blog {
       line-height: 0; }
     .blog_flexbox .blog_inner_wrap a .blog_inner_text {
       width: 50%; }
+    .blog_flexbox .blog_inner_wrap a .blog_text:first-child {
+      font-size: 22px;
+      font-size: 2.2rem; }
+    .blog_flexbox .blog_inner_wrap a .blog_text:last-child {
+      font-size: 19px;
+      font-size: 1.9rem; }
   .blog_flexbox .blog_inner_wrap:nth-child(even) a {
     flex-direction: row-reverse; }
     .blog_flexbox .blog_inner_wrap:nth-child(even) a .blog_inner_text p {

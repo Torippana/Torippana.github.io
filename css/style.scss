@@ -30,7 +30,7 @@ $fontColor_wh: #fff;
 html{ font-size: 62.5%; }
 @media(max-width:750px){
   html{
-      font-size: 55.5%;
+      font-size: 48%;
   }
 }
 
@@ -50,7 +50,7 @@ body{
 }
 
 a {
-  @include link-colors($fontColor_wh, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  @include link-colors($fontColor_wh, darken($keyColor, 10%));
   text-decoration: none;
   // &:hover {
   //   border-bottom: 3px solid ;
@@ -175,9 +175,12 @@ header{
       left: 71px;
     }
     @media (max-width:750px){
+      .title1{
+        top: 9px;
+      }
       .title2{
-      bottom: 15px;
-      left: 60px;
+      bottom: 9px;
+      left: 56px;
       }
     }
   }
@@ -206,6 +209,14 @@ header{
   }
 
 }/*#header_area*/
+@media (max-width: 750px){
+  #header_area{
+    height: 60px;
+    .sitetitle{
+      height: 60px;
+    }
+  }
+}
 
 /* Header(PC幅)
 ------------------------------------------------------------*/
@@ -241,7 +252,7 @@ header{
         display :block;
         text-align: right;
         i{
-          @include fontsize(50);
+          @include fontsize(43);
         }
       }
     }
@@ -252,17 +263,24 @@ header{
   display: none;
 }
 .sp_slide_menu{
+  background: #000;
 .sp_menu_toggle{
-  padding-top: 10px;
   li{
     display: block;
     text-align: center;
-    padding: 5px 0;
+    padding: 10px 0;
     margin: 3px 0;
-    border: 1px solid #000;
+    border-bottom: 1px solid #fff;
     a{
-      @include fontsize(16);
+      @include fontsize(19);
     }
+  }
+  li:first-child{
+    margin-top: 0;
+    border-top: 1px solid #fff;
+  }
+  li:last-child{
+    margin-bottom: 0;
   }
 }
 }
@@ -311,9 +329,20 @@ footer{
     @include fontsize(35);
     color: #fff;
   }
+  .kasen_about{
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: inline-box;
+    width: 40px;
+    border-bottom: 3px solid #fff;
+  }
+  
   .kasen{
     position: absolute;
-    top: 40px;
+    top: 50px;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -331,7 +360,7 @@ footer{
   .section_title{
     margin-bottom: 15px;
     // .section_title_text{
-    //       @include fontsize(23);
+    //       @include fontsize(22);
     // }
   }
 }
@@ -365,15 +394,15 @@ footer{
     }
   }
   @media (max-width: 750px){
-    // #main_image{
-    //   div{
-    //     .main_image_inner{
-    //       .top_text{
-    //         @include fontsize(20);
-    //       }
-    //     }
-    //   }
-    // }
+  #main_image{
+    div{
+      .main_image_inner{
+        .top_text{
+          display: none;
+        }
+      }
+    }
+  }
   }
 
 /* アバウト(ABOUT)
@@ -383,7 +412,7 @@ footer{
     background-image: url('../images/top/top_about.jpg');/*背景画像*/
     background-attachment: fixed;/*画面からの相対位置（背景固定）*/
     background-size: cover;/*背景サイズ調整*/
-    height: 500px;/*div高さ*/
+    height: 700px;/*div高さ*/
     position:relative;/*相対位置に配置するように調整*/
    .about_text {
        position:absolute;/*親要素からの相対位置*/
@@ -396,7 +425,9 @@ footer{
       padding:0;/*要素内余白*/
       text-align: center;
       width: 100%;
-      
+      .about_padding{
+      padding-top: 70px;
+      }
     }
   }
   .about_background::before{
@@ -423,7 +454,22 @@ footer{
   ------------------------------------------------------------*/
   @media (max-width: 750px){
     .about_background{
-      // height: 350px;
+      height: 450px;
+
+      .about_text {
+       position:absolute;/*親要素からの相対位置*/
+      // color: rgba(255,255,255,0.9);/*文字色*/
+      top: 46%;/*親要素中の縦位置*/
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      // transform: translate(0%,-50%);/*文字ずれ調整*/
+      padding:0;/*要素内余白*/
+
+      .about_padding{
+      padding-top: 70px;
+      }
+    }
     }
     .padding_sp{
       padding: 0 20px;
@@ -481,7 +527,7 @@ footer{
       padding:0;/*要素内余白*/
       text-align: center;
       width: 100%;
-      @include fontsize(30);
+      @include fontsize(27);
     }
   }
   /*-----(PC幅）---------*/
@@ -498,9 +544,11 @@ footer{
   
   /*-----(SP幅）---------*/
   @media(max-width:750px){
-    // .contents_text{
-    //   @include fontsize(20);
-    // }
+    .contents_images_wrap{
+      // .contents_text{
+      //   @include fontsize(20);
+      // }
+    }
   }
 
 /* ブログ(BLOG)
@@ -580,12 +628,12 @@ footer{
         .blog_inner_text{
           width: 50%;
         }
-        // .blog_text:first-child{
-        //   @include fontsize(23);
-        // }
-        // .blog_text:last-child{
-        //   @include fontsize(20);
-        // }
+        .blog_text:first-child{
+          @include fontsize(22);
+        }
+        .blog_text:last-child{
+          @include fontsize(19);
+        }
       }
     }
     .blog_inner_wrap:nth-child(even){
