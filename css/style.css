@@ -243,8 +243,8 @@ footer {
   position: relative;
   margin-bottom: 30px; }
   .section_title .section_title_text {
-    font-size: 35px;
-    font-size: 3.5rem;
+    font-size: 30px;
+    font-size: 3rem;
     color: #fff; }
   .section_title .kasen_about {
     position: absolute;
@@ -294,9 +294,6 @@ main #blog {
     font-size: 40px;
     font-size: 4rem; }
 
-@media (max-width: 750px) {
-  #main_image div .main_image_inner .top_text {
-    display: none; } }
 /* アバウト(ABOUT)
 ------------------------------------------------------------*/
 .about_background {

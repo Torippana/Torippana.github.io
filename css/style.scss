@@ -326,7 +326,7 @@ footer{
   margin-bottom: 30px;
   @extend .text-center;
   .section_title_text{
-    @include fontsize(35);
+    @include fontsize(30);
     color: #fff;
   }
   .kasen_about{
@@ -398,7 +398,7 @@ footer{
     div{
       .main_image_inner{
         .top_text{
-          display: none;
+          // display: none;
         }
       }
     }
