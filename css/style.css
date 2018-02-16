@@ -487,6 +487,7 @@ main #blog {
 /* =========LIST.HTML
 ------------------------------------------------------------*/
 .list_top_image {
+  display: none;
   background-image: url("../images/list/list_bar_top.jpg");
   /*背景画像*/
   background-attachment: fixed;
@@ -554,6 +555,9 @@ main #blog {
         bottom: 8px;
         left: 0; } }
 @media (max-width: 750px) {
+  .list_top_image {
+    display: none; }
+
   .shoplist_wrap {
     display: flex;
     flex-direction: column; }

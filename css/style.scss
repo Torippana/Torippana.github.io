@@ -661,6 +661,7 @@ footer{
 /* =========LIST.HTML
 ------------------------------------------------------------*/
 .list_top_image{
+  display: none;
   background-image: url('../images/list/list_bar_top.jpg');/*背景画像*/
   background-attachment: fixed;/*画面からの相対位置（背景固定）*/
   // background-size: cover;/*背景サイズ調整*/
@@ -742,6 +743,9 @@ footer{
   }
 }
 @media (max-width: 750px){
+  .list_top_image{
+    display: none;
+  }
   .shoplist_wrap{
     display: flex;
     flex-direction: column;
